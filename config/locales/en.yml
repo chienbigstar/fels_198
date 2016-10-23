@@ -23,6 +23,7 @@ en:
   password_invalid: Password Invalid
   user_fails: Actiob fails
   learn_lesson: Learn lesson
+  confirm_message: Are you sure?
 
   sessions:
     new:
@@ -85,6 +86,8 @@ en:
         title: "New category"
   lesson:
     view: View
+    start: Start
+    continue: Continue
     status:
       unfinish: unfinish
       finish: finish
@@ -95,3 +98,9 @@ en:
     status: Status
     score: score
     action: Action
+    duration: "%{duration} minutes"
+    question_counts: "%{count}"
+    save: Save
+    finish: Finish
+    timer: Lesson Timer
+    created: New lesson created

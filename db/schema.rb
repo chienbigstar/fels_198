@@ -46,8 +46,9 @@ ActiveRecord::Schema.define(version: 20161012103040) do
     t.integer  "category_id"
     t.integer  "user_id"
     t.integer  "level_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "deadline"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["category_id"], name: "index_lessons_on_category_id", using: :btree
     t.index ["level_id"], name: "index_lessons_on_level_id", using: :btree
     t.index ["user_id"], name: "index_lessons_on_user_id", using: :btree
@@ -73,8 +74,8 @@ ActiveRecord::Schema.define(version: 20161012103040) do
   end
 
   create_table "results", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer  "word_id"
     t.integer  "lesson_id"
+    t.integer  "word_id"
     t.integer  "answer_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

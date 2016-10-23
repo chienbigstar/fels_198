@@ -9,6 +9,7 @@ class CreateLessons < ActiveRecord::Migration[5.0]
       t.references :category, foreign_key: true
       t.references :user, foreign_key: true
       t.references :level, foreign_key: true
+      t.datetime :deadline
 
       t.timestamps
     end

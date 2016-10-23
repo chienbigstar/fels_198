@@ -4,8 +4,8 @@ class UsersController < ApplicationController
   before_action :valid_user, only: [:edit, :update]
 
   def show
-    @lessons = current_user.lessons.paginate page: params[:page],
-      per_page: Settings.users_show_lessons
+    @lessons = current_user.lessons.desc.paginate page: params[:page],
+      per_page: Settings.per_page_lesson
     @relationship = if current_user.following? @user
       current_user.active_relationships.find_by followed_id: @user.id
     else
