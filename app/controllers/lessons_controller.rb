@@ -24,6 +24,7 @@ class LessonsController < ApplicationController
     if @lesson.start?
       @lesson.update_deadline_and_status
     elsif @lesson.testing? && @lesson.timeout?
+      @lesson.update_attributes score: count_score
       @lesson.finish!
     end 
     @deadline = (@lesson.deadline - Time.now).to_i
